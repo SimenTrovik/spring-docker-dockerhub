@@ -22,4 +22,6 @@ jobs:
           rev=$(git rev-parse --short HEAD)
           docker build . -t hello
           docker tag hello 244530008913.dkr.ecr.eu-west-1.amazonaws.com/sitr008-ecr:$rev
+          docker tag hello 244530008913.dkr.ecr.eu-west-1.amazonaws.com/sitr008-ecr:latest
           docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/sitr008-ecr:$rev
+          docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/sitr008-ecr:latest
